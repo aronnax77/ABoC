@@ -1,0 +1,14 @@
+Take one of your files containing a working program, say sea.c, and rename
+the file sea.  Now try and compile it.  Some C compilers will complain;
+others will not.  On UNIX systems, the complaint may be quite cryptic, with
+words such as bad magic number or unable to process using elf libraries.
+What happens on your system?
+
+Recieved the following massage on my system:
+
+tyrion$~: gcc sea
+/usr/bin/ld:sea: file format not recognized; treating as linker script
+/usr/bin/ld:sea:1: syntax error
+collect2: error: ld returned 1 exit status
+tyrion$~: 
+
