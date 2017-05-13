@@ -30,9 +30,15 @@ similar program that prints a large letter C on the screen. */
 #define OFFSET			"                 "	// 17 blanks
 #define TOP_SPACE		"\n\n\n\n\n"
 
+#define MARGIN			"               "	// 15 blanks
+#define HEIGHT_C		6 
+
 int main(void)
 {
 	int i;
+
+	printf(TOP_SPACE);
+	printf("a) A large letter I");
 
 	printf(TOP_SPACE);
 	printf("a) A large letter I");
@@ -43,6 +49,20 @@ int main(void)
 		printf(OFFSET "  III\n");
 	printf(OFFSET "IIIIIII\n");
 	printf(BOTTOM_SPACE);
+
+	printf("b) A large letter C");
+	printf(TOP_SPACE);
+
+	printf(MARGIN "   CCCC\n");
+	printf(MARGIN " CCCCCCCC\n");
+	printf(MARGIN " CC    CCC\n");
+	printf(MARGIN "CC       C\n");
+	for(i = 0; i < HEIGHT_C; ++i)
+		printf(MARGIN "CC\n");	
+	printf(MARGIN "CC       C\n");
+	printf(MARGIN " CC    CCC\n");
+	printf(MARGIN " CCCCCCCC\n");
+	printf(MARGIN "   CCCC\n");
 
 	return (0);
 }
